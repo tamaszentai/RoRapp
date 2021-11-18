@@ -1,0 +1,39 @@
+<%= form_with scope: :email, url: emails_path, local: true do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+   <div>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </div>
+
+    <div>
+    <%= form.label :template %><br>
+    <%= select_tag :template, options_for_select(@templates.map{|data| [data.title, data.id]}), onchange: 'getData()' %>
+  </div>
+
+  <div>
+    <%= form.label :message_preview %><br>
+    <%= form.text_area :message, size: "50x10" %>
+  </div>
+
+  <div>
+    <%= form.submit :Send %>
+  </div>
+<% end %>
+
+<script>
+const dropdown = document.querySelector("select");
+const textarea = document.querySelector("textarea")
+
+const getData = () => {
+fetch(`http://localhost:3000/emails/${dropdown.value}`)
+  .then(response => response.json())
+  .then(data => textarea.value = data.message);
+}
+
+getData();
+
+</script>
