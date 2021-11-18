@@ -7,9 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Template.create!([{
-    title: "Hello",
-    message: "Hello, nice to see you!"
+    title: "Hello Message",
+    message: "Hello, \n \n Thank you for your call today. \n \n Please contact us if you have any further questions. \n \n Yakara"
 },
-    title: "Bye",
-    message: "Bye, good luck in the future!"
+{
+    title: "Bye Message",
+    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n \n Sed felis tortor, blandit a mi sed, luctus tempus leo. \n \n Pellentesque sed vulputate libero, quis finibus libero. Nunc ultricies molestie pulvinar. \n \n Aliquam erat volutpat. \n \n Yakara"
+},
+{
+    title: "Offer Message",
+    message: "Phasellus dignissim est quam, \n \n quis auctor purus finibus eget. Nam venenatis diam sit amet lectus luctus volutpat. \n \n Sed consequat eros et ante porttitor euismod. \n \n Yakara"
+}
 ])

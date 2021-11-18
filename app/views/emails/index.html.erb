@@ -1,12 +1,17 @@
+
+<br>
+<div id="notification" class="alert alert-success position-relative" role="alert">
+<%= $ok %>
+</div>
 <%= form_with scope: :email, url: emails_path, local: true do |form| %>
   <div>
     <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :required => true %>
   </div>
 
    <div>
     <%= form.label :email %><br>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, :required => true %>
   </div>
 
     <div>
@@ -16,23 +21,31 @@
 
   <div>
     <%= form.label :message_preview %><br>
-    <%= form.text_area :message, size: "50x10" %>
+    <%= form.text_area :message, size: "50x8" %>
   </div>
 
   <div>
-    <%= form.submit :Send %>
+    <%= form.submit :Send, :class=>"btn btn-primary text-dark" %>
   </div>
 <% end %>
 
 <script>
 const dropdown = document.querySelector("select");
 const textarea = document.querySelector("textarea")
+const notification = document.getElementById("notification")
 
 const getData = () => {
 fetch(`http://localhost:3000/emails/${dropdown.value}`)
   .then(response => response.json())
   .then(data => textarea.value = data.message);
 }
+
+const hideNotification = () => setTimeout(() => {
+  notification.style.visibility = "hidden";
+}, 2000);
+
+hideNotification();
+
 
 getData();
 

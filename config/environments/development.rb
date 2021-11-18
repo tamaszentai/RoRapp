@@ -84,7 +84,7 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "zentaitamas@gmail.com",
-    password: , 
+    password: "qwertyuiop",
     domain: "smtp.gmail.com",
     openssl_verify_mode: "none",
   }
