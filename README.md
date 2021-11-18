@@ -1,9 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails application which sends an email using a form following MVC design pattern.
+* Ruby on Rails
+* JavaScript
+* Bootstrap
+* Mail_form gem
 
-Things you may want to cover:
 
 * Make sure that your system has the proper prerequisites installed. These include:
 <ul>
