@@ -1,10 +1,12 @@
 # README
 
-<h2>This is a Ruby on Rails application which sends an email using a form following MVC design pattern.</h2>
-* Ruby on Rails
-* JavaScript
-* Bootstrap
-* Mail_form gem
+<h1>Summary</h1>
+<p>This is a Ruby on Rails application which sends an email using a form following MVC design pattern.</p>
+<h2>Used technologies:</h2>
+<li>Ruby on Rails</li>
+<li>JavaScript</li>
+<li>Bootstrap</li>
+<li>Mail_form gem</li>
 
 
 <h2>Make sure that your system has the proper prerequisites installed. These include:</h2>
@@ -16,7 +18,7 @@
 <li>Ruby on Rails</li>
 <li>Webpack</li>
 </ul>
-<h2>For help follow these instructions <a href="https://guides.rubyonrails.org/getting_started.html">HERE</a></h2>
+<h4>For help follow these instructions <a href="https://guides.rubyonrails.org/getting_started.html">HERE</a></h4>
 
 * Clone or download this repository
 
